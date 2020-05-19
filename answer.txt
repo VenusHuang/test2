@@ -1,0 +1,10 @@
+1.
+INSERT INTO students
+VALUES(16,'張曉潔','F','1980-4-29','garce1234@gmail.com',0930119787,'台北市市民大道四段100號13F','162',60),(17,'陳俊銘','M','1972-12-6','mark.chen@gmail.com',0910333555,'台中市台灣大道一段180號','177',72);
+2.
+CREATE TABLE students_F SELECT * FROM students WHERE cSex='F';
+CREATE TABLE students_M SELECT * FROM students WHERE cSex='M';
+3.SELECT * FROM students WHERE cName LIKE '張%';
+4.SELECT cName, cBirthday, cPhone FROM students WHERE cSex='M' and cBirthday >'1990-01-01';
+ SELECT cName, cBirthday, cPhone FROM students WHERE cSex='M' and cBirthday LIKE '199%';
+5.SELECT cName AS'姓名', cPhone AS '電話', cAddr AS '地址' FROM students WHERE cHeight >160 and cWeight <70;
